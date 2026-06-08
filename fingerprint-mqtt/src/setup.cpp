@@ -222,7 +222,6 @@ void mqttConnect()
         topic = "/fingerprint/";
         topic.concat(deviceGateId);
         topic.concat("/delete");
-        deleteTopic[topic.length() + 1];
         topic.toCharArray(deleteTopic, topic.length() + 1);
         Serial.print("Delete topic: ");
         Serial.println(deleteTopic);
@@ -230,7 +229,6 @@ void mqttConnect()
         topic = "/fingerprint/";
         topic.concat(deviceGateId);
         topic.concat("/learn");
-        learnTopic[topic.length() + 1];
         topic.toCharArray(learnTopic, topic.length() + 1);
         Serial.print("Learn topic: ");
         Serial.println(learnTopic);
